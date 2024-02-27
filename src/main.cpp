@@ -4,17 +4,14 @@
 int main(void)
 {
     std::vector<float> input, weights;
-    input.reserve(10);
-    weights.reserve(10);
-    for(int i=0;i<10;i++)
-    {
-        input.push_back(i/10.f);
-        weights.push_back(i/10.f );
-    }
+    input.push_back(2.f);
+    weights.push_back(0.5f);
     
     auto neuron = Perceptron(input,weights,5);
-    neuron.print_value();
+    neuron.calculate();
 
+    printf("%f\n", neuron.value());
+    
     return 0;
 }
 

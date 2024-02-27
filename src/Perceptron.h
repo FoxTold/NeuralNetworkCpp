@@ -11,8 +11,8 @@ public:
     _bias(bias){};
 
     void calculate();
-    void print_value() const;
-    
+    [[nodiscard]] float value() const { return _value; }
+
 private:
     std::vector<float> _input;
     std::vector<float> _weights;
