@@ -2,14 +2,14 @@
 
 #include <vector>
 
-class Neuron{
+class Perceptron{
 public:
-    Neuron() = default;
-    Neuron(const std::vector<float>& input, const std::vector<float>& weights, float bias)
+    Perceptron() = default;
+    Perceptron(const std::vector<float>& input, const std::vector<float>& weights, float bias)
     :   _input(input),
         _weights(weights),
     _bias(bias){};
-    
+
     void calculate();
     void print_value() const;
     

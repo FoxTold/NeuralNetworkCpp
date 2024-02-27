@@ -1,5 +1,5 @@
 #include <iostream>
-#include "neuron.h"
+#include "Perceptron.h"
 
 int main(void)
 {
@@ -12,8 +12,9 @@ int main(void)
         weights.push_back(i/10.f );
     }
     
-    auto neuron = Neuron(input,weights,5);
+    auto neuron = Perceptron(input,weights,5);
     neuron.print_value();
+
     return 0;
 }
 

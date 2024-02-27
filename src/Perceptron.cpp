@@ -1,6 +1,6 @@
-#include "neuron.h"
+#include "Perceptron.h"
 #include <iostream>
-void Neuron::calculate()
+void Perceptron::calculate()
 {
     if(_input.size() != _weights.size())
     {
@@ -15,6 +15,6 @@ void Neuron::calculate()
     _value = calulated_value + _bias;
 }
 
-void Neuron::print_value() const{
+void Perceptron::print_value() const{
     std::cout<<"Calculated value of neuron: " << _value << std::endl;
 }
